@@ -6,6 +6,8 @@ To get started with CropAnything, you will need to follow these steps:
 
 1. Clone the repository to your local machine.
    `git clone https://github.com/ivan-gl/CropAnything.git`
+2. To start the frontend on your local machine, type:
+   `npm --prefix ./front start`
 
 ## License
 
