@@ -1,0 +1,39 @@
+.landing-page-component-main-div {
+  min-height: 100vh;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.landing-page-component-main-h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.landing-page-component-main-button {
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.landing-page-component-main-button:hover {
+  background-color: aqua;
+  color: red;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+}

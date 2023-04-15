@@ -1,0 +1,7 @@
+.header-component-main-div {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+}
