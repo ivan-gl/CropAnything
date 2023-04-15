@@ -9,6 +9,13 @@ To get started with CropAnything, you will need to follow these steps:
 2. To start the frontend on your local machine, type:
    `npm --prefix ./front start`
 
+## TODO
+
+- [`FRONT`]
+  1.  Add image preview and s3 bucket
+  2.  Add plain image field for cropped figures
+  3.  Add drag and drop
+
 ## License
 
 CropAnything is licensed under the MIT license. See LICENSE for more information.
