@@ -1,10 +1,12 @@
-import React from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/prop-types */
+import React from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
-import "./landingPage.css";
+import './landingPage.css';
 
-const LandingPage = ({ startCropMode }) => {
+function LandingPage({ startCropMode }) {
   return (
     <>
       <Header />
@@ -17,6 +19,6 @@ const LandingPage = ({ startCropMode }) => {
       <Footer />
     </>
   );
-};
+}
 
 export default LandingPage;

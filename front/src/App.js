@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import LandingPage from "./pages/LandingPage";
-import ContentPage from "./pages/ContentPage";
-import "./App.css";
+import React, { useState } from 'react';
+import LandingPage from './pages/LandingPage';
+import ContentPage from './pages/ContentPage';
+import './App.css';
 
-const App = () => {
+function App() {
   const [crop, setCrop] = useState(true);
 
   const startCropMode = () => {
@@ -11,16 +11,14 @@ const App = () => {
   };
 
   return (
-    <>
-      <div className="app-component-main-div">
-        {crop ? (
-          <LandingPage startCropMode={startCropMode} />
-        ) : (
-          <ContentPage startCropMode={startCropMode} />
-        )}
-      </div>
-    </>
+    <div className="app-component-main-div">
+      {crop ? (
+        <LandingPage startCropMode={startCropMode} />
+      ) : (
+        <ContentPage startCropMode={startCropMode} />
+      )}
+    </div>
   );
-};
+}
 
 export default App;

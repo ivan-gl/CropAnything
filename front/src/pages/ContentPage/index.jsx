@@ -1,10 +1,12 @@
-import React from "react";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Wrapper from "../../components/Wrapper";
-import "./contentPage.css";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/button-has-type */
+import React from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import Wrapper from '../../components/Wrapper';
+import './contentPage.css';
 
-const ContentPage = ({ startCropMode }) => {
+function ContentPage({ startCropMode }) {
   return (
     <>
       <Header />
@@ -17,6 +19,6 @@ const ContentPage = ({ startCropMode }) => {
       <Footer />
     </>
   );
-};
+}
 
 export default ContentPage;
