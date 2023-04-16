@@ -1,0 +1,49 @@
+.upload-image-component-main-div {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.upload-image-component-main-image-noContent {
+  width: 50%;
+}
+
+.photo-input {
+  border: 1px solid rgba(64, 48, 111, 0.3);
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 42px;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  background-color: hsla(0, 100%, 50%, 0.25);
+
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 42px;
+}
+
+.photo-input:hover {
+  background-color: red;
+  color: white;
+  font-weight: 500;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+.upload-photo-preview {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+@media screen and (min-width: 1280px) {
+  .upload-photo-preview {
+    max-width: 640px;
+    max-height: 640px;
+  }
+}

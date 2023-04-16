@@ -5,5 +5,5 @@
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
-  background-color: aqua;
+  background-color: hsla(0, 100%, 50%, 0.35);
 }

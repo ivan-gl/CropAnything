@@ -1,0 +1,15 @@
+.crop-image-adder-component-main-div {
+  min-height: 80vh;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.crop-image-adder-component-main-image-withContent {
+  width: 92%;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(120, 120, 120, 1);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(120, 120, 120, 1);
+  box-shadow: 0px 0px 5px 5px rgba(120, 120, 120, 1);
+}

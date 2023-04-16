@@ -1,12 +1,13 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useContext } from 'react';
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import { applicationContext } from '../../contexts';
 
 import './landingPage.css';
 
-function LandingPage({ startCropMode }) {
+function LandingPage() {
+  const { startCropMode } = useContext(applicationContext);
   return (
     <>
       <Header />
@@ -16,7 +17,7 @@ function LandingPage({ startCropMode }) {
           CROP
         </button>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

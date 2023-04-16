@@ -1,7 +1,6 @@
 .content-page-component-main-div {
-  min-height: 100vh;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,14 +15,14 @@
   border: none;
   font-size: 2rem;
   font-weight: 700;
-  background-color: red;
-  color: white;
+  background-color: hsla(0, 100%, 50%, 0.25);
+  color: black;
   cursor: pointer;
 }
 
 .content-page-component-main-button:hover {
-  background-color: aqua;
-  color: red;
+  background-color: red;
+  color: white;
   font-size: 2rem;
   font-weight: 700;
   padding: 10px;
