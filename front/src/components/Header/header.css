@@ -3,5 +3,16 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: aqua;
+  background-color: hsla(0, 100%, 50%, 0.5);
+}
+
+.header-component-main-h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+}
+
+.header-component-main-h2:hover {
+  color: black;
 }
