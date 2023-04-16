@@ -10,10 +10,7 @@ const ContentPage = ({ startCropMode }) => {
       <Header />
       <div className="content-page-component-main-div">
         <Wrapper />
-        <button
-          className="content-page-component-main-button"
-          onClick={startCropMode}
-        >
+        <button className="content-page-component-main-button" onClick={startCropMode}>
           BACK
         </button>
       </div>
