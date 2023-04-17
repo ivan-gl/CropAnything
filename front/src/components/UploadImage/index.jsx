@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { applicationContext } from '../../contexts';
+
 import './uploadImage.css';
 
 function UploadImage() {
