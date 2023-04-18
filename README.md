@@ -12,7 +12,7 @@ To get started with CropAnything, you will need to follow these steps:
 ## TODO
 
 - [`FRONT`]
-  1.  Add image preview and s3 bucket
+  1.  Add image preview
   2.  Add plain image field for cropped figures
   3.  Add drag and drop
 
