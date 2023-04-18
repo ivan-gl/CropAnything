@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
-import { applicationContext } from '../../contexts';
+import AppContext from '../hooks/createContext.tsx';
 
 import './uploadImage.css';
 
 function UploadImage() {
-  const { uploadedImage, setUploadedImage } = useContext(applicationContext);
+  const {
+    uploadedImage: [uploadedImage, setUploadedImage],
+  } = useContext(AppContext);
+
   return (
     <div className="upload-image-component-main-div">
       {uploadedImage && (

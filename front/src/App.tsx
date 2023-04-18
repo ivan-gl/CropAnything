@@ -1,7 +1,3 @@
-import LandingPage from './pages/LandingPage';
-import ContentPage from './pages/ContentPage';
-import { ApplicationProvider } from './contexts';
-
 import './App.css';
 
 // Copyright (c) Meta Platforms, Inc. and affiliates.
@@ -33,16 +29,10 @@ const App = () => {
     clicks: [clicks],
     image: [, setImage],
     maskImg: [, setMaskImg],
+    uploadedImage: [uploadedImage, setUploadedImage],
   } = useContext(AppContext)!;
   const [model, setModel] = useState<InferenceSession | null>(null); // ONNX model
   const [tensor, setTensor] = useState<Tensor | null>(null); // Image embedding tensor
-
-  const [crop, setCrop] = useState<Boolean>(true); // personal
-  const [uploadedImage, setUploadedImage] = useState<Object | null>(null); //  personal
-
-  const startCropMode = () => {
-    setCrop(!crop);
-  };
 
   // The ONNX model expects the input to be rescaled to 1024.
   // The modelScale state variable keeps track of the scale values.

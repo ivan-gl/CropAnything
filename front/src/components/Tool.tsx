@@ -20,12 +20,14 @@ const Tool = ({ handleMouseMove }: ToolProps) => {
   // monitor changes in the size of the page
   const [shouldFitToWidth, setShouldFitToWidth] = useState(true);
   const bodyEl = document.body;
+
   const fitToPage = () => {
     if (!image) return;
     const imageAspectRatio = image.width / image.height;
     const screenAspectRatio = window.innerWidth / window.innerHeight;
     setShouldFitToWidth(imageAspectRatio > screenAspectRatio);
   };
+
   const resizeObserver = new ResizeObserver((entries) => {
     for (const entry of entries) {
       if (entry.target === bodyEl) {
@@ -33,6 +35,7 @@ const Tool = ({ handleMouseMove }: ToolProps) => {
       }
     }
   });
+
   useEffect(() => {
     fitToPage();
     resizeObserver.observe(bodyEl);
@@ -42,7 +45,7 @@ const Tool = ({ handleMouseMove }: ToolProps) => {
   }, [image]);
 
   const imageClasses = '';
-  const maskImageClasses = `absolute opacity-50 pointer-events-none`;
+  const maskImageClasses = `absolute opacity-60 pointer-events-none`;
 
   // Render the image and the predicted mask image on top
   return (
@@ -53,13 +56,13 @@ const Tool = ({ handleMouseMove }: ToolProps) => {
           onMouseOut={() => _.defer(() => setMaskImg(null))}
           onTouchStart={handleMouseMove}
           src={image.src}
-          className={`${shouldFitToWidth ? 'w-full' : 'h-full'} ${imageClasses}`}
+          className={`${shouldFitToWidth ? 'w-[100%]' : 'w-[100%]'} ${imageClasses}`}
         ></img>
       )}
       {maskImg && (
         <img
           src={maskImg.src}
-          className={`${shouldFitToWidth ? 'w-full' : 'h-full'} ${maskImageClasses}`}
+          className={`${shouldFitToWidth ? 'w-[100%]' : 'w-[100%]'} ${maskImageClasses}`}
         ></img>
       )}
     </>

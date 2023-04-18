@@ -9,11 +9,13 @@ import * as _ from 'underscore';
 import Tool from './Tool';
 import { modelInputProps } from './helpers/Interfaces';
 import AppContext from './hooks/createContext';
+import ShowMaskImage from './ShowMaskImage';
 
 const Stage = () => {
   const {
     clicks: [, setClicks],
     image: [image],
+    maskImg: [maskImg],
   } = useContext(AppContext)!;
 
   const getClick = (x: number, y: number): modelInputProps => {
@@ -29,17 +31,23 @@ const Stage = () => {
     const rect = el.getBoundingClientRect();
     let x = e.clientX - rect.left;
     let y = e.clientY - rect.top;
+
     const imageScale = image ? image.width / el.offsetWidth : 1;
     x *= imageScale;
     y *= imageScale;
+    console.log(x, y, imageScale);
+
     const click = getClick(x, y);
     if (click) setClicks([click]);
-  }, 15);
+    console.log(click);
+  }, 20);
 
-  const flexCenterClasses = 'flex items-center justify-center';
   return (
-    <div className={`${flexCenterClasses} w-full h-full`}>
-      <div className={`${flexCenterClasses} relative w-[90%] h-[90%]`}>
+    <div className={`w-full h-[100%] flex justify-center items-center p-3`}>
+      <div className={`w-[50%] h-[90%] flex justify-center items-center`}>
+        <ShowMaskImage mask={maskImg} />
+      </div>
+      <div className={`w-[50%] h-[90%] flex justify-center items-center relative`}>
         <Tool handleMouseMove={handleMouseMove} />
       </div>
     </div>
