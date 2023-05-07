@@ -11,7 +11,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import './assets/scss/App.scss';
 import { handleImageScale } from './components/helpers/scaleHelper';
 import { modelScaleProps } from './components/helpers/Interfaces';
-import { onnxMaskToImage } from './components/helpers/maskUtils';
+import { onnxMaskToImage, onnxMaskToCanvas } from './components/helpers/maskUtils';
 import { modelData } from './components/helpers/onnxModelAPI';
 import Stage from './components/Stage';
 import AppContext from './components/hooks/createContext';
@@ -111,10 +111,14 @@ const App = () => {
         if (feeds === undefined) return;
         // Run the SAM ONNX model with the feeds returned from modelData()
         const results = await model.run(feeds);
+
         const output = results[model.outputNames[0]];
+        console.log(output);
         // The predicted mask returned from the ONNX model is an array which is
         // rendered as an HTML image using onnxMaskToImage() from maskUtils.tsx.
         setMaskImg(onnxMaskToImage(output.data, output.dims[2], output.dims[3]));
+        setUploadedImage(onnxMaskToCanvas(output.data, output.dims[2], output.dims[3]));
+        // console.log(uploadedImage);
       }
     } catch (e) {
       console.log(e);
@@ -122,11 +126,6 @@ const App = () => {
   };
 
   return <Stage />;
-  // return (
-  //   <div className="app-component-main-div">
-  //       {crop ? <LandingPage /> : <ContentPage />}
-  //   </div>
-  // );
 };
 
 export default App;

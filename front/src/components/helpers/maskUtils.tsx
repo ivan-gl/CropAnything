@@ -19,6 +19,7 @@ function arrayToImageData(input: any, width: number, height: number) {
       arr[4 * i + 3] = a;
     }
   }
+  console.log(arr);
   return new ImageData(arr, height, width);
 }
 
@@ -43,4 +44,9 @@ function imageDataToCanvas(imageData: ImageData) {
 // Convert the onnx model mask output to an HTMLImageElement
 export function onnxMaskToImage(input: any, width: number, height: number) {
   return imageDataToImage(arrayToImageData(input, width, height));
+}
+
+// Convert the onnx model mask output to a Canvas element
+export function onnxMaskToCanvas(input: any, width: number, height: number) {
+  return imageDataToCanvas(arrayToImageData(input, width, height));
 }

@@ -12,8 +12,8 @@ interface contextProps {
   image: [image: HTMLImageElement | null, setImage: (e: HTMLImageElement | null) => void];
   maskImg: [maskImg: HTMLImageElement | null, setMaskImg: (e: HTMLImageElement | null) => void];
   uploadedImage: [
-    uploadedImage: FileList | ImageData | null,
-    setUploadedImage: (e: FileList | ImageData | null) => void,
+    uploadedImage: FileList | ImageData | HTMLCanvasElement | null,
+    setUploadedImage: (e: FileList | ImageData | HTMLCanvasElement | null) => void,
   ];
 }
 

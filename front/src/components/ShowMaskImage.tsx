@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ShowMaskImage = ({ mask }: any) => {
+const ShowMaskImage = ({ mask, uploadedImage }: any) => {
   return <img src={mask?.src} alt="kropovana slika" />;
 };
 

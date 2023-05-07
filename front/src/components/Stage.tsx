@@ -16,6 +16,7 @@ const Stage = () => {
     clicks: [, setClicks],
     image: [image],
     maskImg: [maskImg],
+    uploadedImage: [uploadedImage],
   } = useContext(AppContext)!;
 
   const getClick = (x: number, y: number): modelInputProps => {
@@ -35,17 +36,17 @@ const Stage = () => {
     const imageScale = image ? image.width / el.offsetWidth : 1;
     x *= imageScale;
     y *= imageScale;
-    console.log(x, y, imageScale);
+    // console.log(x, y, imageScale);
 
     const click = getClick(x, y);
     if (click) setClicks([click]);
-    console.log(click);
+    // console.log(click);
   }, 20);
 
   return (
     <div className={`w-full h-[100%] flex justify-center items-center p-3`}>
       <div className={`w-[50%] h-[90%] flex justify-center items-center`}>
-        <ShowMaskImage mask={maskImg} />
+        {/* <ShowMaskImage mask={maskImg} uploadedImage={uploadedImage} /> */}
       </div>
       <div className={`w-[50%] h-[90%] flex justify-center items-center relative`}>
         <Tool handleMouseMove={handleMouseMove} />

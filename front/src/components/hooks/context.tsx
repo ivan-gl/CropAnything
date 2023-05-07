@@ -14,7 +14,9 @@ const AppContextProvider = (props: {
   const [clicks, setClicks] = useState<Array<modelInputProps> | null>(null);
   const [image, setImage] = useState<HTMLImageElement | null>(null);
   const [maskImg, setMaskImg] = useState<HTMLImageElement | null>(null);
-  const [uploadedImage, setUploadedImage] = useState<FileList | ImageData | null>(null);
+  const [uploadedImage, setUploadedImage] = useState<
+    FileList | ImageData | HTMLCanvasElement | null
+  >(null);
 
   return (
     <AppContext.Provider
